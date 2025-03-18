@@ -14,9 +14,11 @@ from scipy.interpolate import CubicSpline
 from scipy.optimize import minimize
 from scipy.special import ndtr, ndtri
 
+current_dir = os.getcwd()
 load_dotenv()
-DIR_WORK = Path("C:/Users/saiki/OneDrive/Documents/GitHub/WxDerivs/script/wxderivs")
-sys.path.append(str(DIR_WORK / "UniBM"))
+DIR_WORK = Path(current_dir+ "/wxderivs")
+
+sys.path.append(os.path.join(DIR_WORK, "unibm"))
 
 import unibm
 from unibm import benchmark
